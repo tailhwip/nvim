@@ -1,0 +1,22 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\*\shell\Neovim]
+@="Open in Neovim"
+"Icon"="C:\\Program Files\\Neovim\\share\\icons\\hicolor\\128x128\\apps\\nvim.ico"
+
+[HKEY_CLASSES_ROOT\*\shell\Neovim\command]
+@="wt --profile Neovim nvim \"%1\""
+
+[HKEY_CLASSES_ROOT\Directory\shell\Neovim]
+@="Open in Neovim"
+"Icon"="C:\\Program Files\\Neovim\\share\\icons\\hicolor\\128x128\\apps\\nvim.ico"
+
+[HKEY_CLASSES_ROOT\Directory\shell\Neovim\command]
+@="wt --profile Neovim nvim \"%V\""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Neovim]
+@="Open in Neovim"
+"Icon"="C:\\Program Files\\Neovim\\share\\icons\\hicolor\\128x128\\apps\\nvim.ico"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Neovim\command]
+@="wt --profile Neovim nvim ."

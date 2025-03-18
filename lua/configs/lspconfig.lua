@@ -2,12 +2,19 @@
 require("nvchad.configs.lspconfig").defaults()
 
 local lspconfig = require "lspconfig"
-
--- EXAMPLE
-local servers = { "html", "cssls" }
 local nvlsp = require "nvchad.configs.lspconfig"
 
--- lsps with default config
+local servers = {
+  -- cmake
+  "clangd",
+
+  -- web
+  "html",
+  "cssls",
+  "ts_ls",
+  "biome",
+}
+
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = nvlsp.on_attach,

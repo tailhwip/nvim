@@ -13,6 +13,6 @@ vim.api.nvim_create_user_command("SetupLuaTools", function()
 end, {})
 
 vim.api.nvim_create_user_command("SetupWebTools", function()
-  vim.cmd "MasonInstall html-lsp css-lsp typescript-language-server biome"
+  vim.cmd "MasonInstall html-lsp css-lsp typescript-language-server prettier"
   vim.cmd "TSInstall html css javascript typescript"
 end, {})

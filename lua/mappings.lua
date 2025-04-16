@@ -7,4 +7,4 @@ map("i", "jk", "<ESC>")
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
-map("n", "<leader>df", vim.diagnostic.open_float)
+map("n", "<leader>df", vim.diagnostic.open_float, { desc = "LSP diagnostic float" })

@@ -12,7 +12,6 @@ local servers = {
   "html",
   "cssls",
   "ts_ls",
-  "biome",
 }
 
 for _, lsp in ipairs(servers) do

@@ -11,4 +11,8 @@ return {
       require "configs.lspconfig"
     end,
   },
+
+  -- test new blink
+  -- { import = "nvchad.blink.lazyspec" },
 }
+

@@ -9,15 +9,19 @@ AlignArrayOfStructures: Left
 AlignConsecutiveMacros: Consecutive
 AlignConsecutiveShortCaseStatements:
   Enabled: true
+AlignEscapedNewLines: LeftWithLastLine
 # Break
 AllowAllArgumentsOnNextLine: false
 AllowAllParametersOfDeclarationOnNextLine: false
 AllowShortBlocksOnASingleLine: Empty
 AllowShortCaseLabelsOnASingleLine: true
+BreakAfterAttributes: Leave
 BreakBeforeBraces: Allman
 RemoveEmptyLinesInUnwrappedLines: true
 # Indent
 IndentCaseLabels: true
+# Insert
+InsertBraces: true
 # Space
 Cpp11BracedListStyle: false
 SpaceBeforeCpp11BracedList: true

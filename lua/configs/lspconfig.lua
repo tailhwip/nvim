@@ -12,6 +12,15 @@ function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
 end
 
 -- Configure LSP servers
+vim.lsp.config("clangd", {
+  cmd = {
+    "clangd",
+    "--background-index",
+    "--clang-tidy",
+    "--header-insertion=never",
+  },
+})
+
 vim.lsp.enable({
   -- c/cpp
   "clangd",
@@ -21,10 +30,3 @@ vim.lsp.enable({
   "cssls",
   "ts_ls",
 })
-
-vim.lsp.config["clangd"].cmd = {
-  "clangd",
-  "--background-index",
-  "--header-insertion=never",
-  "--clang-tidy",
-}

@@ -4,8 +4,9 @@ require "nvchad.options"
 -- o.cursorlineopt ='both' -- to enable cursorline!
 
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
-  pattern = "*.slang",
-  callback = function()
-    vim.bo.filetype = "slang"
+  pattern = { "*.glsl", "*.hlsl", "*.slang" },
+  callback = function(args)
+    local ext = vim.fn.fnamemodify(args.file, ":e")
+    vim.bo.filetype = ext
   end,
 })

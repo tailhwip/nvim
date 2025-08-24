@@ -3,8 +3,11 @@ require("conform").setup {
     -- c/cpp
     c = { "clang-format", "uncrustify" },
     cpp = { "clang-format", "uncrustify" },
-    cmake = { "gersemi" },
+
+    glsl = { "clang-format", "uncrustify" },
     slang = { "clang-format", "uncrustify" },
+
+    cmake = { "gersemi" },
 
     -- web
     html = { "prettier" },
@@ -27,10 +30,8 @@ require("conform").setup {
   formatters = {
     uncrustify = {
       command = "uncrustify",
-      args = function(_, ctx)
-        local ft = vim.bo[ctx.buf].filetype:upper()
-        ft = ft == "Slang" and "C" or ft
-        return { "-c", ".uncrustify.cfg", "-q", "-l", ft }
+      args = function()
+        return { "-c", ".uncrustify.cfg", "-q", "-l", "CPP" }
       end,
       stdin = true,
     },

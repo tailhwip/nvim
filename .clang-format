@@ -1,28 +1,32 @@
 BasedOnStyle: Microsoft
-# Print
-ColumnLimit: 130
-ContinuationIndentWidth: 8
-ConstructorInitializerIndentWidth: 8
 # Align
 AlignAfterOpenBracket: DontAlign
 AlignArrayOfStructures: Left
 AlignConsecutiveMacros: Consecutive
 AlignConsecutiveShortCaseStatements:
   Enabled: true
-AlignEscapedNewLines: LeftWithLastLine
+AlignEscapedNewlines: LeftWithLastLine
 # Break
 AllowAllArgumentsOnNextLine: false
 AllowAllParametersOfDeclarationOnNextLine: false
 AllowShortBlocksOnASingleLine: Empty
 AllowShortCaseLabelsOnASingleLine: true
+AllowShortLambdasOnASingleLine: Empty
+BraceWrapping:
+  BeforeLambdaBody: true
 BreakAfterAttributes: Leave
 BreakBeforeBraces: Allman
-RemoveEmptyLinesInUnwrappedLines: true
+BreakTemplateDeclarations: Yes
+PackConstructorInitializers: NextLineOnly
+PenaltyBreakAssignment: 100
 # Indent
+ContinuationIndentWidth: 8
 IndentCaseLabels: true
-# Insert
-InsertBraces: true
+LambdaBodyIndentation: OuterScope
 # Space
 Cpp11BracedListStyle: false
 SpaceBeforeCpp11BracedList: true
+RemoveEmptyLinesInUnwrappedLines: true
 WrapNamespaceBodyWithEmptyLines: Always
+# Insert
+InsertBraces: true

@@ -12,8 +12,10 @@ require("conform").setup {
     -- web
     html = { "prettier" },
     css = { "prettier" },
+
     javascript = { "prettier" },
     javascriptreact = { "prettier" },
+
     typescript = { "prettier" },
     typescriptreact = { "prettier" },
 

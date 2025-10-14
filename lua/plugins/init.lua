@@ -3,7 +3,7 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       require "configs.lspconfig"
-    end,
+    end
   },
 
   {
@@ -16,13 +16,23 @@ return {
     event = "BufWritePre",
     config = function()
       require "configs.conform"
-    end,
+    end
+  },
+
+  {
+    "tpope/vim-projectionist",
+    lazy = false,
+    config = function()
+      require "configs.projectionist"
+    end
   },
 
   {
     "tpope/vim-sleuth",
     lazy = false
-  }
+  },
+
+  { "tpope/vim-commentary" },
 
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },

@@ -20,8 +20,8 @@ require("conform").setup {
     typescriptreact = { "prettier" },
 
     -- misc
-    json = { "jq" },
-    yaml = { "yq" },
+    json = { "prettier" },
+    yaml = { "prettier" },
   },
 
   format_on_save = {

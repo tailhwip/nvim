@@ -1,10 +1,17 @@
-vim.api.nvim_create_user_command("SetupDefaultTools", function()
-  vim.cmd "MasonInstall lua-language-server stylua jq yq" -- local: lua
+vim.api.nvim_create_user_command("SetupCppTools", function()
+  -- local: cmake ninja llvm uncrustify
+  vim.cmd "MasonInstall gersemi"
+  vim.cmd "TSInstall c cpp cmake"
 end, {})
 
-vim.api.nvim_create_user_command("SetupGraphicsTools", function()
-  vim.cmd "MasonInstall gersemi slang" -- local: llvm uncrustify
-  vim.cmd "TSInstall c cpp cmake glsl hlsl slang"
+vim.api.nvim_create_user_command("SetupShaderTools", function()
+  -- local: slang
+  vim.cmd "TSInstall glsl hlsl slang"
+end, {})
+
+vim.api.nvim_create_user_command("SetupLuaTools", function()
+  -- local: lua
+  vim.cmd "MasonInstall lua-language-server stylua"
 end, {})
 
 vim.api.nvim_create_user_command("SetupWebTools", function()

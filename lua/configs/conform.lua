@@ -1,40 +1,45 @@
-require("conform").setup {
+require('conform').setup {
   formatters_by_ft = {
     -- c/cpp
-    c = { "clang-format", "uncrustify" },
-    cpp = { "clang-format", "uncrustify" },
+    c = { 'clang-format', 'uncrustify' },
+    cpp = { 'clang-format', 'uncrustify' },
+    cmake = { 'gersemi' },
 
-    glsl = { "clang-format", "uncrustify" },
-    slang = { "clang-format", "uncrustify" },
-
-    cmake = { "gersemi" },
+    -- shaders
+    glsl = { 'clang-format', 'uncrustify' },
+    slang = { 'clang-format', 'uncrustify' },
 
     -- web
-    html = { "prettier" },
-    css = { "prettier" },
-
-    javascript = { "prettier" },
-    javascriptreact = { "prettier" },
-
-    typescript = { "prettier" },
-    typescriptreact = { "prettier" },
+    html = { 'prettier' },
+    css = { 'prettier' },
+    javascript = { 'prettier' },
+    javascriptreact = { 'prettier' },
+    typescript = { 'prettier' },
+    typescriptreact = { 'prettier' },
 
     -- misc
-    json = { "prettier" },
-    yaml = { "prettier" },
+    lua = { 'stylua' },
+    json = { 'prettier' },
+    yaml = { 'prettier' },
+    xml = { 'xmlformatter' },
+    sh = { 'shfmt' },
+    zsh = { 'shfmt' },
   },
 
   format_on_save = {
+    lsp_format = 'fallback',
     timeout_ms = 2000,
-    lsp_fallback = true,
   },
 
   formatters = {
+    xmlformatter = {
+      command = 'xmlformat',
+      args = { '--blanks', '--preserve-attributes', '-' },
+      stdin = true,
+    },
     uncrustify = {
-      command = "uncrustify",
-      args = function()
-        return { "-c", ".uncrustify.cfg", "-q", "-l", "CPP" }
-      end,
+      command = 'uncrustify',
+      args = { '-c', '.uncrustify.cfg', '-q', '-l', 'CPP' },
       stdin = true,
     },
   },

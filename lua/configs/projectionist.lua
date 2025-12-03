@@ -1,16 +1,16 @@
 vim.g.projectionist_heuristics = {
-  ["*"] = {
-    ["*.c"] = {
-      alternate = "{}.h"
+  ['*'] = {
+    ['*.c'] = {
+      alternate = '{}.h',
     },
-    ["*.h"] = {
-      alternate = "{}.c"
+    ['*.h'] = {
+      alternate = '{}.c',
     },
-    ["*.cpp"] = {
-      alternate = "{}.hpp"
+    ['*.cpp'] = {
+      alternate = '{}.hpp',
     },
-    ["*.hpp"] = {
-      alternate = "{}.cpp"
+    ['*.hpp'] = {
+      alternate = '{}.cpp',
     },
-  }
+  },
 }
